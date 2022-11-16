@@ -10,10 +10,10 @@ System.Console.WriteLine("Введите минимальное значение
 int M = int.Parse(Console.ReadLine()); 
 System.Console.WriteLine("Введите максимальное значение промежутка: ");
 int N = int.Parse(Console.ReadLine()); 
-int PrintEvenNumber(int M, int N)
+int PrintSumNumber(int M, int N)
 {
     if(M >= N) return M;
-    else return M + PrintEvenNumber(M + 1, N);
+    else return M + PrintSumNumber(M + 1, N);
 }
 
-System.Console.WriteLine(PrintEvenNumber(M, N));  
+System.Console.WriteLine($"Сумма элементов: {PrintSumNumber(M, N)}");  
